@@ -19,3 +19,20 @@ query GetLatestArticles($limit: Float) {
     mainPictureUrl
   }
 }
+
+mutation DeleteArticle($id: Float!) {
+  deleteArticle(id: $id)
+}
+
+query GetCategories {
+  categories {
+    id
+    name
+  }
+}
+
+mutation CreateArticle($data: CreateArticleInput!) {
+  createArticle(data: $data) {
+    id
+  }
+}

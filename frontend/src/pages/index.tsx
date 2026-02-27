@@ -4,7 +4,10 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 
 export default function Home() {
-  const { data, loading, error } = useGetLatestArticlesQuery({ variables: { limit: 5 } });
+const { data, loading, error } = useGetLatestArticlesQuery({
+  variables: { limit: 5 },
+  fetchPolicy: "network-only", // recup les données fraiche
+});
 
   return (
     <Layout pageTitle="Accueil">
