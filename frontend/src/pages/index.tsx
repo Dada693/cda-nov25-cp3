@@ -1,7 +1,9 @@
-
+import Layout from "@/components/Layout";
 
 export default function Home() {
   return (
-    <div>Checkpoint 3</div>
+    <Layout pageTitle="Accueil">
+      <div>Checkpoint 3</div>
+    </Layout>
   );
 }
