@@ -36,3 +36,11 @@ mutation CreateArticle($data: CreateArticleInput!) {
     id
   }
 }
+
+query SearchArticles($title: String) {
+  articles(title: $title) {
+    id
+    title
+    mainPictureUrl
+  }
+}
