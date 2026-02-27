@@ -1,0 +1,21 @@
+query GetArticle($id: Float!) {
+  article(id: $id) {
+    id
+    title
+    body
+    mainPictureUrl
+    createdAt
+    updatedAt
+    category {
+      name
+    }
+  }
+}
+
+query GetLatestArticles($limit: Float) {
+  articles(limit: $limit) {
+    id
+    title
+    mainPictureUrl
+  }
+}
